@@ -1,0 +1,161 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+font-size:62.5%;
+font-family: 'Roboto', sans-serif;
+}
+
+.hero{
+   display: flex;
+   width: 100%;
+   background-color:azure;
+   justify-content: space-around;
+   padding: 0 10px;
+
+}
+.hero-img{
+    width: 50%;
+    max-width: 400px;
+    min-height: 250px;
+    height: 300px;
+}
+.info{
+    place-self: center;
+}
+.info h1{
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 3.8rem;
+}
+
+.info p{
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2rem;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.info button{
+    width: 150px;
+    height: 30px;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-left: 50px;
+    box-shadow: 0 2px 4px gray;
+}
+.dishes-container{
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+.dishes-container h2{
+color: #333;
+font-weight: bold;
+text-align: center;
+margin-bottom: 50px;
+font-size: 2rem;
+}
+.dishes{
+    max-width: 1050px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 250px));
+    gap: 5px;
+    align-self: center;
+}
+.dishes-item{
+    width: 100%;
+    height: 100% ;
+    object-fit: cover;
+}
+.dishes-item_big{
+
+    grid-column: 1/3;
+    grid-row: 1/3; 
+}
+.menu{
+    margin-bottom: 200px;
+}
+.menu-title{
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 200px));
+    justify-content: center;
+     gap: 10px ;
+     
+}
+.menu-grid img{
+    width: 100%;
+    min-width: 150px;
+    height: 100%;
+    object-fit: contain;
+    background-color: coral;
+   border-top-left-radius: 40px;
+}
+
+@media (max-width: 1024px) {
+
+    .dishes{
+        place-content: center;
+        margin: 0 10px;
+    }
+
+    .menu-grid img:nth-child(5) {
+        grid-column: 1/2;
+    }
+    .menu-grid img:nth-child(4){
+        grid-column: 2/ 3 ;
+        grid-row: 2 / 3;
+    }
+
+}
+
+@media (max-width: 425px) {
+    .hero{
+        background-image:url('/images/hero.png');
+        background-position-x: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    
+    }
+    .hero-img{
+       display: none;
+    }
+    .info p{
+      width: 60%;
+    }
+     .info button{
+        margin: 0 70px  ;
+     }
+   
+    .dishes{
+        grid-template-columns: repeat(2, 150px);
+        place-content: center;
+        margin: 0 10px;
+    }
+    .menu-grid{
+        width: 200px ;
+        display:  block;
+        margin: 20px auto;
+    }
+
+    .menu-grid img{
+      margin-bottom: 20px;
+    }
+    }
+        
+         

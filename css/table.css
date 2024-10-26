@@ -1,0 +1,3 @@
+.dishes{
+    grid-template-columns: repeat(auto-fit, minmax(75px, 200px));
+}
